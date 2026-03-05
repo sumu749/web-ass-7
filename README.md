@@ -1,16 +1,70 @@
-# React + Vite
+### Customer Support Zone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### What is JSX, and why is it used?
 
-Currently, two official plugins are available:
+JSX is a syntax extension for JavaScript that allows you to write HTML‑like code inside React components. The markup looks familiar and improves readability, making UI definitions more natural. When React processes it, JSX is transformed into `React.createElement` calls behind the scenes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```jsx
+<div>Hello World</div>
+```
 
-## React Compiler
+is compiled to:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```js
+React.createElement("div", null, "Hello World");
+```
 
-## Expanding the ESLint configuration
+That call returns a plain object representing a virtual DOM node:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```js
+{
+  type: 'div',
+  props: {
+    children: 'Hello World'
+  }
+}
+```
+
+---
+
+#### What is the difference between State and Props?
+
+- **Props** flow from parent to child and cannot be modified by the receiving component.
+- **State** is local data that the component controls, typically updated via hooks like `useState` or in class components with `this.setState`.
+
+---
+
+#### What is the useState hook, and how does it work?
+
+`useState` is a React hook for storing state in functional components.
+
+```jsx
+const [count, setCount] = useState(0);
+```
+
+- The hook returns a pair: the current value and a setter function.
+- Calling the setter updates the state and triggers a re-render.
+- Each `useState` call creates an independent state slot; order must remain consistent between renders.
+
+---
+
+#### How can you share state between components in React?
+
+1. **Lift state up** – move shared state to the closest common ancestor and pass it down via props.
+2. **Context API** – create a context provider so any descendant can access the value without prop drilling.
+3. **State management libraries** – Redux, MobX, Zustand, etc., offer global stores.
+4. **URL/query parameters or services** – useful for persisting state across pages or sessions.
+
+---
+
+#### How is event handling done in React?
+
+React uses camelCase event names and passes functions as handlers.
+
+```jsx
+<button onClick={() => setCount(count + 1)}>Increment</button>
+```
+
+- The event object is a `SyntheticEvent` that normalizes behavior across browsers.
+- You can call `event.preventDefault()` or `event.stopPropagation()` just like in plain DOM.
+- Bind `this` in class components or use arrow functions in functional components.
