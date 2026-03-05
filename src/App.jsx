@@ -35,7 +35,10 @@ function App() {
     return (
         <>
             <Navbar />
-            <Hero />
+            <Hero
+                inProgressCount={taskList.length}
+                resolvedCount={resolvedList.length}
+            />
             <MainSection
                 tickets={tickets}
                 taskList={taskList}
