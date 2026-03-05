@@ -7,6 +7,7 @@ import MainSection from "./Components/MainSection/MainSection";
 import Navbar from "./Components/NavBar/Navbar";
 import ticketsData from "./Components/data/tickets.json";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./Components/Footer/footer";
 
 function App() {
     const [tickets, setTickets] = useState([]);
@@ -51,6 +52,7 @@ function App() {
                 autoClose={2500}
                 hideProgressBar={false}
             />
+            <Footer />
         </>
     );
 }

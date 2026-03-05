@@ -83,7 +83,7 @@ const MainSection = ({
     resolvedList,
 }) => {
     return (
-        <main className="w-full max-w-7xl mx-auto px-4 md:px-6 mt-8">
+        <main className="w-full container mx-auto px-4 md:px-6 mt-8">
             <div className="flex flex-col md:flex-row gap-6">
                 {/* Left: Tickets grid */}
                 <div className="md:w-2/3">
