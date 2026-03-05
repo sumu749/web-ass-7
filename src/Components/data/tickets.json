@@ -1,0 +1,92 @@
+[
+    {
+        "id": "abab1",
+        "title": "Login page not working",
+        "description": "Users unable to login with correct credentials on mobile devices",
+        "customer": "Acme Corp",
+        "priority": "high",
+        "status": "in-progress",
+        "createdAt": "2024-03-15T10:30:00Z"
+    },
+    {
+        "id": "abab2",
+        "title": "Payment gateway timeout",
+        "description": "Payment processing takes more than 30 seconds",
+        "customer": "TechStart Inc",
+        "priority": "high",
+        "status": "in-progress",
+        "createdAt": "2024-03-16T09:15:00Z"
+    },
+    {
+        "id": "abab3",
+        "title": "UI alignment issues",
+        "description": "Dashboard charts misaligned on Safari browser",
+        "customer": "DesignHub",
+        "priority": "low",
+        "status": "resolved",
+        "createdAt": "2024-03-14T14:20:00Z"
+    },
+    {
+        "id": "abab4",
+        "title": "Email notifications not sending",
+        "description": "Welcome emails stuck in queue",
+        "customer": "StartupXYZ",
+        "priority": "medium",
+        "status": "in-progress",
+        "createdAt": "2024-03-16T11:45:00Z"
+    },
+    {
+        "id": "abab5",
+        "title": "Data export failing",
+        "description": "CSV export crashes for large datasets",
+        "customer": "DataCorp",
+        "priority": "high",
+        "status": "resolved",
+        "createdAt": "2024-03-15T08:00:00Z"
+    },
+    {
+        "id": "abab6",
+        "title": "Mobile responsive menu",
+        "description": "Hamburger menu not opening on iOS",
+        "customer": "AppWorks",
+        "priority": "medium",
+        "status": "in-progress",
+        "createdAt": "2024-03-16T13:20:00Z"
+    },
+    {
+        "id": "abab7",
+        "title": "Password reset broken",
+        "description": "Reset link expires immediately",
+        "customer": "SecureInc",
+        "priority": "high",
+        "status": "resolved",
+        "createdAt": "2024-03-15T16:40:00Z"
+    },
+    {
+        "id": "abab8",
+        "title": "Search filter not working",
+        "description": "Product search by category returns no results",
+        "customer": "EcomStore",
+        "priority": "medium",
+        "status": "in-progress",
+        "createdAt": "2024-03-16T10:10:00Z"
+    },
+    {
+        "id": "abab9",
+        "title": "API rate limiting",
+        "description": "Users hitting rate limit too quickly",
+        "customer": "DevAPI",
+        "priority": "low",
+        "status": "resolved",
+        "createdAt": "2024-03-14T12:30:00Z"
+    },
+    {
+        "id": "abab10",
+        "title": "Dark mode toggle",
+        "description": "Toggle switch not persisting user preference",
+        "customer": "UXLabs",
+        "priority": "low",
+        "status": "in-progress",
+        "createdAt": "2024-03-16T09:50:00Z"
+    }
+]
